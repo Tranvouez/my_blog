@@ -1,0 +1,13 @@
+---
+title: "Bienvenue"
+author: "Tranvouez Benoit-Alexandre"
+date: "2023-02-13"
+lang: fr
+categories: [actualité]
+---
+
+Premier post : Un peu d'humour pour commencer, les sujets sérieux arrivent par la suite.
+
+![](chat.jpg){fig-align="center" width="50%"}
+
+La philosophie du chat se contente de marcher à défaut de voler très haut.

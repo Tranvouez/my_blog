@@ -1,0 +1,19 @@
+---
+title: "Projets, expériences et articles" 
+lang: fr
+listing:
+  contents: posts
+  sort:
+    - "date desc"
+    - "title desc"
+  type: grid
+  page-size: 8
+  grid-columns: 2
+  grid-item-border: true
+  date-format: "full"
+  categories: true 
+  sort-ui: false
+  filter-ui: [date,title,author]
+page-layout: full
+title-block-banner: FALSE
+---

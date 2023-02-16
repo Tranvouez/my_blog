@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "Mon blog personnel"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/Tranvouez
+      - icon: linkedin
+        href: https://www.linkedin.com/in/benoit-alexandre-t-96053b1a0 
+format:
+  html:
+    theme: lux
+    css: styles.css
+
+editor: visual

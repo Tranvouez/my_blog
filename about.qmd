@@ -1,0 +1,27 @@
+---
+title: "Description"
+date: "02-14-2022"
+lang: fr
+image: tree.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/benoit-alexandre-t-96053b1a0/ 
+    - icon: github
+      text: Github
+      href: https://github.com/Tranvouez
+---
+
+Ce blog a pour vocation de transmettre des expériences, articles ou projets réalisés dans le cadre de l'analyse de donnnées.
+
+# Auteur
+
+L'auteur de ce blog est Benoit-Alexandre Tranvouez. Actuellement étudiant en master économétrie à l'université de Nantes en France .
+
+# Diplomes
+
+Double licence mathématiques et économique, Université d'Angers France, 2019-2022
+
+Baccalauréat économique et social, option mathématiques, Collège -Lycée Sainte-Anne Brest France, 2019.

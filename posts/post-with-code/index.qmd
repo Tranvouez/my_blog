@@ -1,0 +1,104 @@
+---
+title: "Le package Heron"
+author: "Tranvouez Benoit-Alexandre"
+lang: fr
+date: "2023-02-13"
+categories: [code, package, mathématiques]
+---
+![](heron.jpg){fig-align="center" width="50%"}
+
+## Librairie Heron
+
+La librairie heron permet de calculer l'aire d'un triangle en prenant pour argument ses trois longueurs.
+
+La formule de Heron prend quatre arguments, les trois longueurs du triangles et le semi-périmètre de ce triangle.
+
+$$
+Aire\ d' Heron = \sqrt{p\times(p-a)(p-b)(p-c)}
+$$
+
+La formule du demi-périmétre est la suivante :
+
+$$
+ p\ = \frac{a+b+c}{2} 
+$$
+
+Le package peut être téléchargé sur mon github personnel pour se faire il suffit d'executer les commandes suivantes dans la console R. Veuilliez à étre connecté à internet pour pouvoir le télécharger. N'oubliez pas d'installer le package remotes si vous ne l'avez pas encore fait.
+
+```{r, eval=FALSE}
+remotes::install_github("Tranvouez/heron")
+library(heron)
+```
+
+Le détail de la fonction héron est le suivant :
+
+```{r, eval=FALSE}
+heron <- function(a, b, c) {
+  if (!is.numeric(c(a, b, c))) {
+    stop("Valeur(s) non numerique(s).")
+  }
+  else if (a < 0 | b < 0 | c < 0) {
+    stop("Longueur(s) négative(s).")
+  }
+  else if (a == 0 | b == 0 | c == 0) {
+    warning("Longueur(s) nulle(s).")
+
+  }
+    p <- demi_perimetre(a, b, c)
+  return(sqrt(p * ((p - a) * (p - b) * (p - c))))
+}
+```
+
+## 
+
+Triangle de Sierpiński
+
+Les triangles de Sierpinski rentrent dans l'analyse des Fractales, très largement démocratisés par Benoît Mandelbrot. Un fractale est une figure mathématique qui aura une structure similaire répété un nombre très élevé de fois. On peut nommé le flocon de Koch qui prend un triangle est ajoute 4 fois l'identique de ce triangle à chaque itérations à ce même triangle.
+
+De la même façon, Sierpinski décide de prendre un triangle équilateral dans lequel il trace 4 triangles de même taille et retire le triangle centrale. On répéte l'opération un nombre de fois extremement élevé et à terme on obtient un triangle dont l'aire tend vers zéro.
+
+Nous allons appliquer cet algorithme et utiliser la fonction heron pour calculer cet aire et expliciter sa décroissance.
+
+```{r}
+#| echo: false
+library(targets)
+```
+
+### Première itération :
+
+```{r}
+#| echo: false
+tar_read("plot_1")
+paste("L'aire du triangle est de ", round(tar_read("Aire_1"),4))
+
+```
+
+### Deuxième itération :
+
+```{r}
+#| echo: false
+tar_read("plot_2")
+paste("L'aire du triangle est de ", round(tar_read("Aire_2"),4))
+```
+
+### Troisième itération :
+
+```{r}
+#| echo: false
+tar_read("plot_3")
+paste("L'aire du triangle est de ", round(tar_read("Aire_3"),4))
+```
+
+### Quatrième itération :
+
+```{r}
+#| echo: false
+tar_read("plot_4")
+paste("L'aire du triangle est de ", round(tar_read("Aire_4"),4))
+```
+
+\newline
+
+On s'apperçoit bien de la décroissance des aires.
+
+### 
