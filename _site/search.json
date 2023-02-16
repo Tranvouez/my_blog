@@ -18,7 +18,7 @@
     "href": "posts/post-with-code/index.html",
     "title": "Le package Heron",
     "section": "",
-    "text": "La librairie heron permet de calculer l’aire d’un triangle en prenant pour argument ses trois longueurs.\nLa formule de Heron prend quatre arguments, les trois longueurs du triangles et le semi-périmètre de ce triangle.\n\\[\nAire\\ d' Heron = \\sqrt{p\\times(p-a)(p-b)(p-c)}\n\\]\nLa formule du demi-périmétre est la suivante :\n\\[\np\\ = \\frac{a+b+c}{2}\n\\]\nLe package peut être téléchargé sur mon github personnel pour se faire il suffit d’executer les commandes suivantes dans la console R. Veuilliez à étre connecté à internet pour pouvoir le télécharger.\n\nremotes::install_github(\"Tranvouez/heron\")\nlibrary(heron)\n\nLe détail de la fonction héron est le suivant :\n\nheron <- function(a, b, c) {\n  if (!is.numeric(c(a, b, c))) {\n    stop(\"Valeur(s) non numerique(s).\")\n  }\n  else if (a < 0 | b < 0 | c < 0) {\n    stop(\"Longueur(s) négative(s).\")\n  }\n  else if (a == 0 | b == 0 | c == 0) {\n    warning(\"Longueur(s) nulle(s).\")\n\n  }\n    p <- demi_perimetre(a, b, c)\n  return(sqrt(p * ((p - a) * (p - b) * (p - c))))\n}"
+    "text": "Un heron"
   },
   {
     "objectID": "posts/welcome/index.html",

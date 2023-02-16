@@ -6,7 +6,7 @@ date: "2023-02-13"
 categories: [code, package, mathématiques]
 ---
 
-![](oiseau.jpg){fig-align="center" width="50%"}
+![Un heron](heron.jpg){fig-align="center" width="50%"}
 
 ## Librairie Heron
 
