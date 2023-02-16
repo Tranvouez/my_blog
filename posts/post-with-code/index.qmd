@@ -5,6 +5,7 @@ lang: fr
 date: "2023-02-13"
 categories: [code, package, mathématiques]
 ---
+
 ![](heron.jpg){fig-align="center" width="50%"}
 
 ## Librairie Heron

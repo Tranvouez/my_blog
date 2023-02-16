@@ -6,7 +6,9 @@ lang: fr
 categories: [actualité]
 ---
 
-Premier post : Un peu d'humour pour commencer, les sujets sérieux arrivent par la suite.
+### Premier post : 
+
+Un peu d'humour pour commencer, les sujets sérieux arrivent par la suite.
 
 ![](chat.jpg){fig-align="center" width="50%"}
 
