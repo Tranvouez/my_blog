@@ -25,7 +25,7 @@
     "href": "posts/welcome/index.html",
     "title": "Bienvenue",
     "section": "",
-    "text": "Premier post : Un peu d’humour pour commencer, les sujets sérieux arrivent par la suite.\n\n\n\n\n\nLa philosophie du chat se contente de marcher à défaut de voler très haut."
+    "text": "Premier post :\nUn peu d’humour pour commencer, les sujets sérieux arrivent par la suite.\n\n\n\n\n\nLa philosophie du chat se contente de marcher à défaut de voler très haut."
   },
   {
     "objectID": "posts/post-with-code/index.html#section",
@@ -33,5 +33,12 @@
     "title": "Le package Heron",
     "section": "",
     "text": "Triangle de Sierpiński\nLes triangles de Sierpinski rentrent dans l’analyse des Fractales, très largement démocratisés par Benoît Mandelbrot. Un fractale est une figure mathématique qui aura une structure similaire répété un nombre très élevé de fois. On peut nommé le flocon de Koch qui prend un triangle est ajoute 4 fois l’identique de ce triangle à chaque itérations à ce même triangle.\nDe la même façon, Sierpinski décide de prendre un triangle équilateral dans lequel il trace 4 triangles de même taille et retire le triangle centrale. On répéte l’opération un nombre de fois extremement élevé et à terme on obtient un triangle dont l’aire tend vers zéro.\nNous allons appliquer cet algorithme et utiliser la fonction heron pour calculer cet aire et expliciter sa décroissance.\n\n\n\n\nPremière itération :\n\n\n\n\n\n[1] \"L'aire du triangle est de  0.1875\"\n\n\n\n\nDeuxième itération :\n\n\n\n\n\n[1] \"L'aire du triangle est de  0.1406\"\n\n\n\n\nTroisième itération :\n\n\n\n\n\n[1] \"L'aire du triangle est de  0.1055\"\n\n\n\n\nQuatrième itération :\n\n\n\n\n\n[1] \"L'aire du triangle est de  0.0791\"\n\n\nOn s’apperçoit bien de la décroissance des aires."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#librairie-heron",
+    "href": "posts/post-with-code/index.html#librairie-heron",
+    "title": "Le package Heron",
+    "section": "Librairie Heron",
+    "text": "Librairie Heron\nLa librairie heron permet de calculer l’aire d’un triangle en prenant pour argument ses trois longueurs.\nLa formule de Heron prend quatre arguments, les trois longueurs du triangles et le semi-périmètre de ce triangle.\n\\[\nAire\\ d' Heron = \\sqrt{p\\times(p-a)(p-b)(p-c)}\n\\]\nLa formule du demi-périmétre est la suivante :\n\\[\np\\ = \\frac{a+b+c}{2}\n\\]\nLe package peut être téléchargé sur mon github personnel pour se faire il suffit d’executer les commandes suivantes dans la console R. Veuilliez à étre connecté à internet pour pouvoir le télécharger. N’oubliez pas d’installer le package remotes si vous ne l’avez pas encore fait.\n\nremotes::install_github(\"Tranvouez/heron\")\nlibrary(heron)\n\nLe détail de la fonction héron est le suivant :\n\nheron <- function(a, b, c) {\n  if (!is.numeric(c(a, b, c))) {\n    stop(\"Valeur(s) non numerique(s).\")\n  }\n  else if (a < 0 | b < 0 | c < 0) {\n    stop(\"Longueur(s) négative(s).\")\n  }\n  else if (a == 0 | b == 0 | c == 0) {\n    warning(\"Longueur(s) nulle(s).\")\n\n  }\n    p <- demi_perimetre(a, b, c)\n  return(sqrt(p * ((p - a) * (p - b) * (p - c))))\n}"
   }
 ]

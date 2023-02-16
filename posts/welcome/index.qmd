@@ -6,7 +6,7 @@ lang: fr
 categories: [actualité]
 ---
 
-### Premier post : 
+### Premier post :
 
 Un peu d'humour pour commencer, les sujets sérieux arrivent par la suite.
 
