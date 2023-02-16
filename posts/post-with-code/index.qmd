@@ -6,8 +6,6 @@ date: "2023-02-13"
 categories: [code, package, mathématiques]
 ---
 
-![](heron.jpg){fig-align="center" width="50%"}
-
 ## Librairie Heron
 
 La librairie heron permet de calculer l'aire d'un triangle en prenant pour argument ses trois longueurs.
